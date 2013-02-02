@@ -1,0 +1,26 @@
+<% include header.ejs %>
+</head>
+<body>
+<div class="container">
+	<div class="sixteen columns">
+		<h1>CommuniDeals</h1>
+		<h2>A local business daily deals exchange.</h2>
+		<hr />
+		<h3>Create a New Deal</h3>
+		<form action="/create" method="POST">
+			<p>Deal Title</p>
+	   		<input type="text" name="deal_title" /><br />
+	   		<p>Business Name</p>
+	   		<input type="text" name="deal_bname" /><br />
+	   		<p>Business Logo (external link)</p>
+	   		<input type="text" name="deal_blogo" /><br />
+	   		<p>Deal Details</p>
+	   		<textarea name="deal_detail"></textarea><br />
+	   		<input type="submit" value="Create New Deal" />
+		</form>
+	</div>
+</div>
+<!-- End Document
+================================================== -->
+</body>
+</html>

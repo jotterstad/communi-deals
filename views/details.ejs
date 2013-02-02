@@ -1,0 +1,96 @@
+<% include header.ejs %>
+<% include deals_ng.ejs %>
+</head>
+<body>
+<div class="header-container">
+	<div class="container">
+		<div class="two-thirds column">
+			<div class="site-title">Communideals | A local business daily deals exchange.</div>
+		</div>
+		<div class="one-third column right-text">
+			<div class="site-logout"><a href="/logout">Logout</a></div>
+		</div>
+	</div>
+</div>
+
+	<div class="content-container">
+		<div class="container">
+			<div class="three columns">
+				<div class="avatar-container" ng-controller="usersCtrl">
+					<div class="avatar"><img src="http://www.gravatar.com/avatar/<%= avatar %>" /><br />{{fullname}}</div>
+				</div>
+				<div class="side-nav-container">
+					<ul class="side-nav-list">
+					<li><a href="/profile"><img src="/images/agent.png" />Profile</a></li>
+					<li><a href="/profile"><img src="/images/multi-agents.png" />Friends</a></li>
+					<hr />
+					<li><a href="/"><img src="/images/tag.png" />New Deals</a></li>
+					<li><a href="/profile"><img src="/images/star.png" />Deals Redeemed</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="nine columns">
+				<div class="deelfeed-tools-container">
+					<div class="tools-sort-button tools-active">Date</div>
+					<div class="tools-sort-button">A-Z</div>
+					<div class="clear"></div>
+				</div>
+				
+				<div class="dealfeed-outside-container" ng-controller="dealsCtrl">
+				<div class="dealfeed-container" ng-repeat="deals in alldeals">
+					<div class="deal-logo"><img src="{{deals.deal_blogo}}" /></div>
+					<div class="deal-busname"><a href="#">{{deals.deal_bname}}</a> | <a href="/details/{{deals._id}}">Posted a New Deal</a></div>
+					<div class="deal-title">{{deals.deal_bname}}|Redeem Deal Before: Janurary 7, 2012</div>
+					<div class="deal-redeembutton"><input type="button" value="Redeem Deal"></div>
+					<div class="clear"></div>
+					<div class="deal-friends-container">
+						Matthew Bugnaki, Ryan Reed, Kelli Schmitz, and 2 others have redeemed!
+					</div>
+					<div class="clear">&nbsp;</div>
+				</div>
+				</div>
+			</div>
+			
+			<div class="three columns">Right</div>
+		
+		</div>
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

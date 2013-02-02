@@ -1,0 +1,19 @@
+---
+applications:
+  .:
+    name: communideals
+    framework:
+      name: node
+      info:
+        mem: 64M
+        description: Node.js Application
+        exec: 
+    infra: rs
+    url: ${name}.${target-base}
+    mem: 256M
+    instances: 1
+    services:
+      communideals-db:
+        type: mongodb
+      mongodb-9285:
+        type: mongodb

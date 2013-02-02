@@ -1,0 +1,33 @@
+   <script type="text/javascript">
+   	var data = "<%= deals %>";
+   	var newdata = data.replace(/&quot;/g,'"');
+   	var angdata = angular.fromJson(newdata);
+   
+   var user = "<%= user %>";
+   var newuser = user.replace(/&quot;/g,'"');
+   var angdatauser = angular.fromJson(newuser);
+    	
+   function dealsCtrl($scope){
+   	$scope.alldeals = angdata;
+   }
+   
+   function usersCtrl($scope){
+    $scope.userdata = angdatauser;
+    
+    var user = [];
+    angular.forEach($scope.userdata, function(data, key){
+    	this.push(data);
+    }, user);
+    
+    //console.log(user);
+    //$scope.fullname = user[1] + " " + user[2];
+   
+   }
+   
+   function usereditCtrl($scope){
+    $scope.editdata = angdatauser;
+    //console.log($scope.usereditdata);
+   }
+   
+  </script>
+  

@@ -1,0 +1,35 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-image: url("/images/background.png");
+  background-repeat: repeat;
+}
+
+ol.deal-item-container {
+	padding: 0;
+	margin: 0;
+}
+
+li.deal-item-list a {
+	display: block;
+	text-decoration: none;
+}
+
+li.deal-item-list a:hover {
+	text-decoration: underline;
+}
+
+li.deal-item-list {
+	font-weight: bold;
+	background-color: #f4f4f4; 
+	padding: 10px;
+	margin: 5px;
+	line-height: 1;
+	text-shadow: 1px 1px #fff;
+}
+
+li.deal-item-list:hover {
+	background-color: #fefdf5;
+	cursor: pointer;
+
+}

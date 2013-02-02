@@ -1,0 +1,28 @@
+<% include header.ejs %>
+</head>
+<body>
+<div class="container">
+	<div class="sixteen columns">
+		<h1>CommuniDeals</h1>
+		<h2>A local business daily deals exchange.</h2>
+		<hr />
+		<h3>Register</h3>
+		<form action="/user/new" method="POST">
+			<p>Username:</p>
+	   		<input type="text" name="username" /><br />
+	   		<p>First Name:</p>
+	   		<input type="text" name="firstname" /><br />
+	   		<p>Last Name:</p>
+	   		<input type="text" name="lastname" /><br />
+	   		<p>Email:</p>
+	   		<input type="text" name="email" /><br />
+	   		<p>Password:</p>
+	   		<input type="password" name="password" /><br />
+	   		<input type="submit" value="Create New Deal" />
+		</form>
+	</div>
+</div>
+<!-- End Document
+================================================== -->
+</body>
+</html>

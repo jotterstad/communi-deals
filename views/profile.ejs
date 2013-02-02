@@ -1,0 +1,98 @@
+<% include header.ejs %>
+<% include deals_ng.ejs %>
+</head>
+<body>
+<div class="header-container">
+	<div class="container">
+		<div class="two-thirds column">
+			<div class="site-title">Communideals | A local business daily deals exchange.</div>
+		</div>
+		<div class="one-third column right-text">
+			<div class="site-logout"><a href="/logout">Logout</a></div>
+		</div>
+	</div>
+</div>
+
+	<div class="content-container">
+		<div class="container">
+			<div class="three columns">
+				<div class="avatar-container" ng-controller="usersCtrl">
+					<div class="avatar"><img src="http://www.gravatar.com/avatar/<%= avatar %>" /><br />{{fullname}}</div>
+				</div>
+				<div class="side-nav-container">
+					<ul class="side-nav-list">
+					<li><a href="/profile"><img src="/images/agent.png" />Profile</a></li>
+					<li><a href="/profile"><img src="/images/multi-agents.png" />Friends</a></li>
+					<hr />
+					<li><a href="/"><img src="/images/tag.png" />New Deals</a></li>
+					<li><a href="/profile"><img src="/images/star.png" />Deals Redeemed</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="nine columns">
+				
+				
+				<div class="profile-outside-container" ng-controller="usereditCtrl">
+				<div class="profile-container">
+					<h1>Edit Profile</h1>
+					<form action="/profile" method="POST">
+					<div class="profile-item-head">Avatar:</div>
+					<div class="profile-item-avatar"><img src="http://www.gravatar.com/avatar/<%= avatar %>" />Avatars are managed by <a href="http://en.gravatar.com">gravatar.com</a> </div>
+					<div class="profile-item-head">Username:</div>
+					<div class="profile-item-value"><input type="text" value="{{editdata.username}}" readonly="readonly" name="username" /></div>
+					<div class="profile-item-head">First Name:</div>
+					<div class="profile-item-value"><input type="text" value="{{editdata.firstname}}" name="firstname"/></div>
+					<div class="profile-item-head">Last Name:</div>
+					<div class="profile-item-value"><input type="text" value="{{editdata.lastname}}" name="lastname"/></div>
+					<div class="profile-item-head">Email Address:</div>
+					<div class="profile-item-value"><input type="text" value="{{editdata.email}}" name="email" /></div>
+					<div><input type="submit" value="Save Profile Changes" /></div>
+					</form>
+					<div class="clear"></div>
+				</div>
+				</div>
+			</div>
+			
+			<div class="three columns">Right</div>
+		
+		</div>
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
